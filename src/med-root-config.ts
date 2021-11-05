@@ -1,19 +1,19 @@
 import { registerApplication, start } from "single-spa";
 
-registerApplication({
-  name: "@single-spa/welcome",
-  app: () =>
-    System.import(
-      "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js"
-    ),
-  activeWhen: ["/"],
-});
-
 // registerApplication({
-//   name: "@med/navbar",
-//   app: () => System.import("@med/navbar"),
-//   activeWhen: ["/"]
+//   name: "@single-spa/welcome",
+//   app: () =>
+//     System.import(
+//       "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js"
+//     ),
+//   activeWhen: ["/"],
 // });
+
+registerApplication({
+  name: "mgeweb",
+  app: () => System.import("mgeweb"),
+  activeWhen: ["/mgeweb"]
+});
 
 start({
   urlRerouteOnly: true,
