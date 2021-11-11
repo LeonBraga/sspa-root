@@ -9,10 +9,12 @@ import { registerApplication, start } from "single-spa";
 //   activeWhen: ["/"],
 // });
 
+console.log('Meu Location: ', location.pathname);
+debugger;
 registerApplication({
   name: "mgeweb",
   app: () => System.import("mgeweb"),
-  activeWhen: ["/mgeweb"]
+  activeWhen: ["/"]
 });
 
 start({
